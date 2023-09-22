@@ -6,7 +6,7 @@ export const theme = {
     text: "#041836", // dark grey
     white: "#ffffff",
     black: "#000000",
-    link: "#1e88e5" // blue
+    link: "#79ffa8" // blue
   },
   breakpoints: {
     small: 480,

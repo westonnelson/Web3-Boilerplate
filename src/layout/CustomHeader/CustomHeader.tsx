@@ -77,7 +77,7 @@ export const Logo: FC<LogoProps> = ({ isDarkMode }) => {
     <div style={{ paddingTop: isMobile ? "25px" : "40px" }}>
       <img
         src={isDarkMode ? web3Boilerplate_logo_dark : web3Boilerplate_logo}
-        alt="web3Boilerplate_logo"
+        alt="xNFTE Analytics"
         width={isMobile ? "70px" : "90px"}
       />
     </div>

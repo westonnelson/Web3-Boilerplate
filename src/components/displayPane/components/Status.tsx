@@ -22,9 +22,9 @@ const Status = ({
   isActive: ReturnType<Web3ReactHooks["useIsActive"]>;
 }) => {
   const statusMapping = {
-    isActivating: "🟡 Connecting",
-    isActive: "🟢 Connected",
-    default: "⚪️ Disconnected"
+    isActivating: "🟡 Wallet is Connecting",
+    isActive: "🟢 Wallet is Connected",
+    default: "⚪️ Wallet is Disconnected"
   };
 
   let status = statusMapping.default;

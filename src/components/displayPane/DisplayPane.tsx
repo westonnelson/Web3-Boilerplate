@@ -45,7 +45,7 @@ const DisplayPane: React.FC<DisplayPaneProps> = ({ isDarkMode }) => {
         border: isDarkMode ? "1px solid rgba(152, 161, 192, 0.24)" : "none"
       }}
     >
-      <Title>Display Info</Title>
+      <Title>Staked NFTE Analytics</Title>
       <div style={styles.content}>
         <Status isActivating={isActivating} isActive={isActive} />
         <Infos chainId={chainId} />

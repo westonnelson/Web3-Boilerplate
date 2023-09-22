@@ -16,12 +16,6 @@ const MATIC: AddEthereumChainParameter["nativeCurrency"] = {
   decimals: 18
 };
 
-const FTM: AddEthereumChainParameter["nativeCurrency"] = {
-  name: "Fantom",
-  symbol: "FTM",
-  decimals: 18
-};
-
 const BSC: AddEthereumChainParameter["nativeCurrency"] = {
   name: "BNB Chain",
   symbol: "BNB",
@@ -116,18 +110,6 @@ export const CHAINS: {
     nativeCurrency: ETH,
     blockExplorerUrls: ["https://optimistic.etherscan.io"]
   },
-  420: {
-    chainId: "420",
-    urls: [
-      infuraKey ? `https://optimism-goerli.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}` : "",
-      alchemyKey ? `https://opt-mainnet.g.alchemy.com/v2/${alchemyKey}` : "",
-      "https://goerli.optimism.io"
-    ].filter(Boolean),
-    publicUrls: ["https://goerli.optimism.io"].filter(Boolean),
-    name: "Optimism Goerli",
-    nativeCurrency: ETH,
-    blockExplorerUrls: ["https://goerli-explorer.optimism.io"]
-  },
   // Arbitrum
   42161: {
     chainId: "42161",
@@ -141,18 +123,7 @@ export const CHAINS: {
     nativeCurrency: ETH,
     blockExplorerUrls: ["https://arbiscan.io"]
   },
-  421613: {
-    chainId: "421613",
-    urls: [
-      infuraKey ? `https://arbitrum-goerli.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}` : "",
-      alchemyKey ? `https://arb-goerli.g.alchemy.com/v2/${alchemyKey}` : "",
-      "https://goerli-rollup.arbitrum.io/rpc"
-    ].filter(Boolean),
-    publicUrls: ["https://goerli-rollup.arbitrum.io/rpc"].filter(Boolean),
-    name: "Arbitrum Goerli",
-    nativeCurrency: ETH,
-    blockExplorerUrls: ["https://testnet.arbiscan.io"]
-  },
+
   // Polygon
   137: {
     chainId: "137",
@@ -167,61 +138,6 @@ export const CHAINS: {
     nativeCurrency: MATIC,
     blockExplorerUrls: ["https://polygonscan.com"]
   },
-  80001: {
-    chainId: "80001",
-    urls: [
-      infuraKey ? `https://polygon-mumbai.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}` : "",
-      alchemyKey ? `https://polygon-mumbai.g.alchemy.com/v2/${alchemyKey}` : "",
-      "https://rpc-mumbai.maticvigil.com"
-    ].filter(Boolean),
-    publicUrls: ["https://rpc-mumbai.maticvigil.com"].filter(Boolean),
-    name: "Polygon Mumbai",
-    nativeCurrency: MATIC,
-    blockExplorerUrls: ["https://mumbai.polygonscan.com"]
-  },
-  // zkSync
-  324: {
-    chainId: "324",
-    urls: [
-      alchemyKey ? `https://polygonzkevm-mainnet.g.alchemy.com/v2/${alchemyKey}` : "",
-      "https://mainnet.era.zksync.io"
-    ].filter(Boolean),
-    publicUrls: ["https://mainnet.era.zksync.io"].filter(Boolean),
-    name: "zkSync Era",
-    nativeCurrency: ETH,
-    blockExplorerUrls: ["https://explorer.zksync.io"]
-  },
-  280: {
-    chainId: "280",
-    urls: [
-      alchemyKey ? `https://polygonzkevm-testnet.g.alchemy.com/v2/${alchemyKey}` : "",
-      "https://testnet.era.zksync.dev"
-    ].filter(Boolean),
-    publicUrls: ["https://testnet.era.zksync.dev"].filter(Boolean),
-    name: "zkSync Era Testnet",
-    nativeCurrency: ETH,
-    blockExplorerUrls: ["https://goerli.explorer.zksync.io"]
-  },
-  // Fantom
-  250: {
-    chainId: "250",
-    urls: [
-      infuraKey ? `https://fantom-mainnet.gateway.pokt.network/v1/lb/${pocketNetwork}` : "",
-      "https://rpc.ankr.com/fantom"
-    ].filter(Boolean),
-    publicUrls: ["https://rpc.ankr.com/fantom"].filter(Boolean),
-    name: "Fantom",
-    nativeCurrency: FTM,
-    blockExplorerUrls: ["https://ftmscan.com/"]
-  },
-  4002: {
-    chainId: "4002",
-    urls: ["https://rpc.testnet.fantom.network"].filter(Boolean),
-    publicUrls: ["https://rpc.testnet.fantom.network"].filter(Boolean),
-    name: "Fantom Testnet",
-    nativeCurrency: FTM,
-    blockExplorerUrls: ["https://testnet.ftmscan.com/"]
-  },
   // BSC
   56: {
     chainId: "56",
@@ -235,17 +151,7 @@ export const CHAINS: {
     nativeCurrency: BSC,
     blockExplorerUrls: ["https://bscscan.com/"]
   },
-  97: {
-    chainId: "97",
-    urls: ["https://data-seed-prebsc-1-s1.binance.org:8545/", "https://data-seed-prebsc-1-s3.binance.org:8545/"].filter(
-      Boolean
-    ),
-    publicUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545/"].filter(Boolean),
-    name: "BNB Testnet",
-    nativeCurrency: BSC,
-    blockExplorerUrls: ["https://testnet.bscscan.com/"]
-  }
-};
+}
 
 export const URLS: { [chainId: number]: string[] } = Object.keys(CHAINS).reduce<{ [chainId: number]: string[] }>(
   (accumulator, chainId) => {

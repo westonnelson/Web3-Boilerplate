@@ -49,20 +49,10 @@ const ChainSelector: FC = () => {
 
   const items: MenuProps["items"] = useMemo(
     () => [
-      { label: "Ethereum", key: chainIds.ethereum, icon: labelToShow(ethereum_Logo, "Ethereum_logo") },
-      { label: "Goerli Testnet", key: chainIds.goerli, icon: labelToShow(ethereum_Logo, "Ethereum_logo") },
-      { label: "Optimism", key: chainIds.optimism, icon: labelToShow(optimistim_Logo, "Optimistim_Logo") },
-      { label: "Optimism Goerli", key: chainIds.optimismtest, icon: labelToShow(optimistim_Logo, "Optimistim_Logo") },
       { label: "Arbitrum", key: chainIds.arbitrum, icon: labelToShow(arbitrum_Logo, "Arbitrum_Logo") },
-      { label: "Arbitrum testnet", key: chainIds.arbitrumtest, icon: labelToShow(arbitrum_Logo, "Arbitrum_Logo") },
-      { label: "zkSync Era", key: chainIds.zkSync, icon: labelToShow(zksync_Logo, "zksync_Logo") },
-      { label: "zkSync testnet", key: chainIds.zksynctest, icon: labelToShow(zksync_Logo, "zksync_Logo") },
-      { label: "Polygon", key: chainIds.polygon, icon: labelToShow(polygon_logo, "Polygon_logo") },
-      { label: "Mumbai", key: chainIds.mumbai, icon: labelToShow(polygon_logo, "Polygon_logo") },
-      { label: "Fantom", key: chainIds.fantom, icon: labelToShow(fantom_Logo, "Fantom_Logo") },
-      { label: "Fantom testnet", key: chainIds.fantomtest, icon: labelToShow(fantom_Logo, "Fantom_Logo") },
-      { label: "BNB Chain", key: chainIds.bsc, icon: labelToShow(bsc_Logo, "BNB_logo") },
-      { label: "BNB Testnet", key: chainIds.bsctest, icon: labelToShow(bsc_Logo, "BNB_logo") }
+      { label: "Ethereum", key: chainIds.ethereum, icon: labelToShow(ethereum_Logo, "Ethereum_logo") },
+    
+     
     ],
     []
   );

@@ -31,7 +31,7 @@ const Infos = ({ chainId }: { chainId: ReturnType<Web3ReactHooks["useChainId"]> 
   return (
     <Typography style={styles.display}>
       <Paragraph style={styles.statusText}>
-        Address:{" "}
+        Your Address:{" "}
         {!isMobile ? (
           <span style={styles.statusValue}>{account}</span>
         ) : (
@@ -55,7 +55,7 @@ const Infos = ({ chainId }: { chainId: ReturnType<Web3ReactHooks["useChainId"]> 
       </Paragraph>
 
       <Paragraph style={styles.statusText}>
-        Balance:
+        xNFTE Balance Over Time:
         <span style={styles.statusValue}>
           {balance
             ? `

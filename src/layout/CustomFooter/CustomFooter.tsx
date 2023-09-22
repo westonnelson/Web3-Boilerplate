@@ -21,10 +21,10 @@ const CustomFooter: FC = () => {
       <Typography>
         <Text>
           Please, leave a ⭐️ on this{" "}
-          <a href="https://github.com/Pedrojok01/Web3-Boilerplate" target="_blank" rel="noopener noreferrer">
-            boilerplate
+          <a href="https://github.com/NFTEarth" target="_blank" rel="noopener noreferrer">
+            analytics app
           </a>{" "}
-          if you like it!
+          if it is helpful.
         </Text>
       </Typography>
     </Footer>
